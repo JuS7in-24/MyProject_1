@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Đặt vé xem phim tại CineSearch">
+  <meta name="author" content="Học sinh">
+  <meta name="keywords" content="đặt vé, vé xem phim">
+  <title>CineSearch - Đặt Vé</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CineSearch</h1>
+  <button class="hamburger" onclick="toggleNav()">☰</button>
+</header>
+
+<nav class="sidebar">
+  <a href="home.html">Trang Chủ</a>
+  <a href="search.html">Tìm Kiếm</a>
+  <a href="movies.html">Phim</a>
+  <a href="booking.html">Đặt Vé</a>
+</nav>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<main>
+  <section class="booking-form">
+    <h2>Đặt Vé Xem Phim</h2>
+    <form action="/datve" method="post">
+      <label for="phim">Chọn Phim:</label>
+      <select id="phim" name="phim" required>
+        <option value="">Chọn phim</option>
+        <option value="cuocchien">Cuộc Chiến Dưới Tháp Cổ</option>
+        <option value="cuoihet">Cười Hết Nước Mắt</option>
+        <option value="demtoi">Đêm Tối Rực Rỡ</option>
+        <option value="muah">Mùa Hè Rực Rỡ</option>
+        <option value="minecraft">A Minecraft Movie</option>
+        <option value="hanhtinh">Hành Tinh Bí Ẩn</option>
+        <option value="tienggoi">Tiếng Gọi Trong Đêm</option>
+        <option value="phieuluu">Chuyến Phiêu Lưu Hài Hước</option>
+        <option value="amateur">The Amateur</option>
+        <option value="blackcab">Black Cab</option>
+      </select>
+      <label for="sove">Số Vé:</label>
+      <input type="number" id="sove" name="sove" min="1" max="10" required placeholder="Số vé từ 1-10">
+      <label for="ngay">Ngày Xem:</label>
+      <input type="date" id="ngay" name="ngay" required>
+      <label for="gio">Giờ Xem:</label>
+      <select id="gio" name="gio" required>
+        <option value="">Chọn giờ</option>
+        <option value="10:00">10:00</option>
+        <option value="13:00">13:00</option>
+        <option value="16:00">16:00</option>
+        <option value="19:00">19:00</option>
+        <option value="21:00">21:00</option>
+      </select>
+      <label for="rap">Rạp Chiếu:</label>
+      <select id="rap" name="rap" required>
+        <option value="">Chọn rạp</option>
+        <option value="rap1">CineStar Quận 1</option>
+        <option value="rap2">Galaxy Nguyễn Trãi</option>
+        <option value="rap3">BHD Lê Lợi</option>
+      </select>
+      <button type="submit">Đặt Vé</button>
+    </form>
+  </section>
+</main>
+
+<script>
+  function toggleNav() {
+    document.querySelector('.sidebar').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+  }
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+</body>
+</html>

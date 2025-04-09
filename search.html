@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tìm kiếm phim dễ dàng tại CineSearch">
+  <meta name="author" content="Học sinh">
+  <meta name="keywords" content="tìm kiếm phim, vé xem phim">
+  <title>CineSearch - Tìm Kiếm Phim</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CineSearch</h1>
+  <button class="hamburger" onclick="toggleNav()">☰</button>
+</header>
+
+<nav class="sidebar">
+  <a href="home.html">Trang Chủ</a>
+  <a href="search.html">Tìm Kiếm</a>
+  <a href="movies.html">Phim</a>
+  <a href="booking.html">Đặt Vé</a>
+</nav>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<main>
+  <section class="search-form">
+    <h2>Tìm Kiếm Phim</h2>
+    <form action="/timkiem" method="get">
+      <label for="tenphim">Tên Phim:</label>
+      <input type="text" id="tenphim" name="tenphim" placeholder="Nhập tên phim">
+      <label for="theloai">Thể Loại:</label>
+      <select id="theloai" name="theloai">
+        <option value="">Chọn thể loại</option>
+        <option value="hanhdong">Hành Động</option>
+        <option value="hai">Hài</option>
+        <option value="kinhdi">Kinh Dị</option>
+        <option value="langman">Lãng Mạn</option>
+        <option value="khoahoc">Khoa Học Viễn Tưởng</option>
+        <option value="phieuluu">Phiêu Lưu</option>
+      </select>
+      <label for="ngaychieu">Ngày Chiếu:</label>
+      <input type="date" id="ngaychieu" name="ngaychieu">
+      <label for="trangthai">Trạng Thái:</label>
+      <select id="trangthai" name="trangthai">
+        <option value="">Tất cả</option>
+        <option value="dangchieu">Đang Chiếu</option>
+        <option value="sapchieu">Sắp Chiếu</option>
+      </select>
+      <button type="submit">Tìm Kiếm</button>
+    </form>
+  </section>
+</main>
+
+<script>
+  function toggleNav() {
+    document.querySelector('.sidebar').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+  }
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+</body>
+</html>

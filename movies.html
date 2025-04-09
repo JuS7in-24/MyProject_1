@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danh sách phim đang chiếu và sắp ra mắt tại CineSearch">
+  <meta name="author" content="Học sinh">
+  <meta name="keywords" content="phim đang chiếu, phim sắp ra mắt">
+  <title>CineSearch - Phim</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CineSearch</h1>
+  <button class="hamburger" onclick="toggleNav()">☰</button>
+</header>
+
+<nav class="sidebar">
+  <a href="home.html">Trang Chủ</a>
+  <a href="search.html">Tìm Kiếm</a>
+  <a href="movies.html">Phim</a>
+  <a href="booking.html">Đặt Vé</a>
+</nav>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<main>
+  <section class="filter-form">
+    <h2>Lọc Phim</h2>
+    <form action="/locphim" method="get">
+      <label for="theloai">Thể Loại:</label>
+      <select id="theloai" name="theloai">
+        <option value="">Tất cả</option>
+        <option value="hanhdong">Hành Động</option>
+        <option value="hai">Hài</option>
+        <option value="kinhdi">Kinh Dị</option>
+        <option value="langman">Lãng Mạn</option>
+        <option value="khoahoc">Khoa Học Viễn Tưởng</option>
+        <option value="phieuluu">Phiêu Lưu</option>
+      </select>
+      <label for="ngaychieu">Ngày Chiếu:</label>
+      <input type="date" id="ngaychieu" name="ngaychieu">
+      <button type="submit">Lọc</button>
+    </form>
+  </section>
+  <section>
+    <h2>Phim Đang Chiếu</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://via.placeholder.com/200x300" alt="Phim 1">
+        <h3>Cuộc Chiến Dưới Tháp Cổ</h3>
+        <p>Thể loại: Hành động</p>
+        <p>Thời lượng: 120 phút</p>
+        <p>Khởi chiếu: 01/04/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Phim Sắp Ra Mắt</h2>
+    <div class="movie-list">
+      <div class="movie-item upcoming">
+        <img src="https://via.placeholder.com/200x300" alt="Phim 5">
+        <h3>Hành Tinh Bí Ẩn</h3>
+        <p>Thể loại: Khoa học viễn tưởng</p>
+        <p>Thời lượng: 130 phút</p>
+        <p>Khởi chiếu: 01/05/2025</p>
+        <button class="quick-book" onclick="showPopup('Hành Tinh Bí Ẩn')">Đặt vé nhanh</button>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="overlay" onclick="hidePopup()"></div>
+<div class="popup" id="quick-book-popup">
+  <span class="close" onclick="hidePopup()">×</span>
+  <h3>Đặt Vé Nhanh: <span id="popup-movie-title"></span></h3>
+  <form action="/datve" method="post">
+    <label for="sove-popup">Số Vé:</label>
+    <input type="number" id="sove-popup" name="sove" min="1" max="10" required placeholder="Số vé từ 1-10">
+    <label for="ngay-popup">Ngày Xem:</label>
+    <input type="date" id="ngay-popup" name="ngay" required>
+    <label for="gio-popup">Giờ Xem:</label>
+    <select id="gio-popup" name="gio" required>
+      <option value="">Chọn giờ</option>
+      <option value="10:00">10:00</option>
+      <option value="13:00">13:00</option>
+      <option value="16:00">16:00</option>
+      <option value="19:00">19:00</option>
+      <option value="21:00">21:00</option>
+    </select>
+    <button type="submit">Đặt Vé</button>
+  </form>
+</div>
+
+<script>
+  function toggleNav() {
+    document.querySelector('.sidebar').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+  }
+  function showPopup(movieTitle) {
+    document.getElementById('popup-movie-title').textContent = movieTitle;
+    document.getElementById('quick-book-popup').classList.add('active');
+    document.querySelector('.overlay').classList.add('active');
+  }
+  function hidePopup() {
+    document.getElementById('quick-book-popup').classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+  }
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+</body>
+</html>

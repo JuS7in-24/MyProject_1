@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chào mừng đến với CineSearch - Đặt vé xem phim dễ dàng">
+  <meta name="author" content="Học sinh">
+  <meta name="keywords" content="phim, vé xem phim, đặt vé">
+  <title>CineSearch - Trang Chủ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>CineSearch</h1>
+  <button class="hamburger" onclick="toggleNav()">☰</button>
+</header>
+
+<nav class="sidebar">
+  <a href="home.html">Trang Chủ</a>
+  <a href="search.html">Tìm Kiếm</a>
+  <a href="movies.html">Phim</a>
+  <a href="booking.html">Đặt Vé</a>
+</nav>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<main>
+  <section>
+    <h2>Chào Mừng Đến Với CineSearch</h2>
+    <p>Khám phá thế giới điện ảnh với CineSearch! Tìm kiếm phim, xem lịch chiếu, và đặt vé dễ dàng chỉ với vài bước đơn giản.</p>
+    <img src="https://via.placeholder.com/800x300" alt="Hình ảnh chào mừng" style="max-width: 100%; border-radius: 8px;">
+  </section>
+  <section>
+    <h2>Phim Nổi Bật</h2>
+    <div class="movie-list">
+      <div class="movie-item">
+        <img src="https://via.placeholder.com/200x300" alt="Phim 1">
+        <h3>Cuộc Chiến Dưới Tháp Cổ</h3>
+        <p>Thể loại: Hành động</p>
+        <p>Khởi chiếu: 01/04/2025</p>
+      </div>
+      <div class="movie-item">
+        <img src="https://via.placeholder.com/200x300" alt="Phim 2">
+        <h3>Hành Tinh Bí Ẩn</h3>
+        <p>Thể loại: Khoa học viễn tưởng</p>
+        <p>Khởi chiếu: 01/05/2025</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2023 CineSearch. Tất cả quyền được bảo lưu.</p>
+</footer>
+<script>
+  function toggleNav() {
+    document.querySelector('.sidebar').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+  }
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+</body>
+</html>
