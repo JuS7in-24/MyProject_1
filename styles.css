@@ -7,7 +7,7 @@ body {
     color: #333;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
-    height: 2000px;
+    height: 2800px;
 }
 
 a {
@@ -269,6 +269,28 @@ button:hover {
 }
 
 /* Dark Mode */
+body.dark-mode .scroll-container {
+    border-color: #444;
+}
+
+body.dark-mode .scroll-item {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .scroll-item button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+body.dark-mode .scroll-item button:hover {
+    background-color: #c0392b;
+}
+
+body.dark-mode .scroll-item img {
+    filter: brightness(0.8);
+}
+
 body.dark-mode {
     background-color: #1a1a1a;
     color: #f4f4f4;
@@ -374,4 +396,21 @@ body.dark-mode footer {
     .movie-item {
         width: 100%;
     }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Typical mobile screen width */
+    margin: 0 auto;
+    background: #000;
+    display: flex; /* Use flexbox to align videos side by side */
+    justify-content: space-around; /* Space them evenly */
+    margin: 20px;
+}
+
+.video-container::before {
+    content: "";
+    display: block;
+    padding-top: 177.77%; /* 9:16 aspect ratio (vertical video) */
 }
