@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chào mừng đến với 🤞Absolute Cinema🤞 - Đặt vé xem phim dễ dàng">
+  <meta name="description" content="Chào mừng đến với Absolute Cinema - Đặt vé xem phim dễ dàng">
   <meta name="author" content="Học sinh">
   <meta name="keywords" content="phim, vé xem phim, đặt vé">
-  <title>🤞Absolute Cinema🤞 - Trang Chủ</title>
+  <title>Absolute Cinema - Trang Chủ</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,46 +18,112 @@
 <nav class="sidebar">
   <a href="home.html">Trang Chủ</a>
   <a href="search.html">Tìm Kiếm</a>
-  <a href="movies.html">Phim</a>
   <a href="booking.html">Đặt Vé</a>
 </nav>
 
 <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 <main>
   <section>
-    <h2>Chào Mừng Đến Với 🤞Absolute Cinema🤞</h2>
-    <p>Khám phá thế giới điện ảnh với 🤞Absolute Cinema🤞! Tìm kiếm phim, xem lịch chiếu, và đặt vé dễ dàng chỉ với vài bước đơn giản.</p>
-    <img src="https://via.placeholder.com/800x300" alt="Hình ảnh chào mừng" style="max-width: 100%; border-radius: 8px;">
+    <h2>Chào Mừng Đến Với Absolute Cinema</h2>
+    <p>Khám phá thế giới điện ảnh với Absolute Cinema! Tìm kiếm phim, xem lịch chiếu, và đặt vé dễ dàng chỉ với vài bước đơn giản.</p>
   </section>
   <section>
     <h2>Phim Nổi Bật</h2>
-    <div class="movie-list">
-      <div class="movie-item">
-        <img src="https://via.placeholder.com/200x300" alt="Phim 1">
-        <h3>Cuộc Chiến Dưới Tháp Cổ</h3>
-        <p>Thể loại: Hành động</p>
-        <p>Khởi chiếu: 01/04/2025</p>
+    <div class="scroll-container" id="scrollContainer">
+      <div  class="scroll-item" >
+        <img style="height: 70%" src="https://cdn-i.vtcnews.vn/upload/2025/04/02/screen-shot-2025-04-02-at-111035-am-11105748.jpg" alt="Phim 1">
+        <h3>Địa Đạo: Mặt Trời Trong Bóng Tối</h3>
+        <p> 04/04/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
       </div>
-      <div class="movie-item">
-        <img src="https://via.placeholder.com/200x300" alt="Phim 2">
-        <h3>Hành Tinh Bí Ẩn</h3>
-        <p>Thể loại: Khoa học viễn tưởng</p>
-        <p>Khởi chiếu: 01/05/2025</p>
+      <div  class="scroll-item">
+        <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67c12e7b2fce8194595515.jpg" alt="Phim 2">
+        <h3>A Minecraft Movie</h3>
+        <p> 04/04/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+      </div>
+      <div  class="scroll-item">
+        <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67d286490dc56020277342.jpg" alt="Phim 3">
+        <h3>Âm Dương Lộ</h3>
+        <p>28/03/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+      </div>
+      <div  class="scroll-item">
+        <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67b8918eb6032673416141.jpg" alt="Phim 4">
+        <h3>Flow</h3>
+        <p> 14/03/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+      </div>
+      <div  class="scroll-item">
+        <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/679374b1c4ec7153064878.jpg" alt="Phim 5">
+        <h3>Mickey 17</h3>
+        <p> 07/03/2025</p>
+        <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
       </div>
     </div>
   </section>
+  <section>
+    <h2>Phim Đang Chiếu</h2>
+    <div class="scroll-container">
+      <div class="scroll-container" id="scrollContainer">
+        <div  class="scroll-item" >
+          <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67dd1ba0d2894105841288.jpg" alt="Phim 6">
+          <h3>Cứu Ma Giải Hạn</h3>
+          <p> 25/04/2025</p>
+          <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+        </div>
+        <div  class="scroll-item">
+          <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67c6c450ab223709422078.jpg" alt="Phim 7">
+          <h3>Panor: Tà Thuật Huyết Ngải</h3>
+          <p> 11/04/2025</p>
+          <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+        </div>
+        <div  class="scroll-item">
+          <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67cef39b1ae36265380360.jpg" alt="Phim 8">
+          <h3>Mật Vụ Phụ Hồ</h3>
+          <p>11/04/2025</p>
+          <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+        </div>
+        <div  class="scroll-item">
+          <img style="height: 70%" src="https://cdn.moveek.com/storage/media/cache/short/67e0f2491a320352196075.jpg" alt="Phim 9">
+          <h3>Tay Nghiệp Dư</h3>
+          <p> 04/04/2025</p>
+          <button class="quick-book" onclick="showPopup('Cuộc Chiến Dưới Tháp Cổ')">Đặt vé nhanh</button>
+        </div>
+    </div>
+  </section>
 </main>
-<footer>
+<footer class="footer">
   <p>© 2025 ✋Absolute Cinema✋. Tất cả quyền được bảo lưu.</p>
 </footer>
 <script>
+  // JavaScript
+  window.addEventListener('scroll', function() {
+    const footer = document.querySelector('.footer');
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Kiểm tra nếu scroll đến cuối trang
+    if (scrollPosition >= documentHeight - 10) { // -10 để trigger sớm hơn một chút
+      footer.classList.add('visible');
+    } else {
+      footer.classList.remove('visible');
+    }
+  });
+  const container = document.getElementById('scrollContainer');
+
+  container.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Ngăn cuộn dọc mặc định
+    container.scrollLeft += event.deltaY; // Chuyển cuộn dọc thành cuộn ngang
+  });
+
   function toggleNav() {
     document.querySelector('.sidebar').classList.toggle('active');
     document.querySelector('.hamburger').classList.toggle('active');
   }
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-  }
+  };
 </script>
 </body>
 </html>
